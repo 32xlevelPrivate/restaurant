@@ -32,6 +32,7 @@ create table restaurants (
 create table dishes(
   id integer primary key default nextval('global_seq'),
   name varchar not null,
+  date date not null,
   price double precision not null,
   restaurant_id integer not null,
   foreign key (restaurant_id) references restaurants (id) on delete cascade
